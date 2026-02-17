@@ -1,4 +1,5 @@
 import 'package:clothesapp/authentication/sign_in/sign_in_page.dart';
+import 'package:clothesapp/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -13,7 +14,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Clothes App',
-      theme: ThemeData(primarySwatch: Colors.blue),
+      themeMode: ThemeMode.system,
+      theme: CAppTheme.lightTheme,
+      darkTheme: CAppTheme.darkTheme,
       home: const SignInPage(),
     );
   }

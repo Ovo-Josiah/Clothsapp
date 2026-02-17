@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:clothesapp/utils/app_colors.dart';
+import 'package:clothesapp/utils/constants/app_colors.dart';
 
 class Button extends StatelessWidget {
   const Button({super.key});
@@ -13,7 +13,7 @@ class Button extends StatelessWidget {
         height: 50,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColors.secondaryColor,
+          color: AppColors.primaryColor,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(
