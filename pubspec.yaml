@@ -36,6 +36,17 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_native_splash: ^2.4.7
 
+  # Utilities
+  http: ^1.6.0
+  dio: ^5.9.1
+  intl: ^0.20.2
+  url_launcher: ^6.3.2
+  logger: ^2.6.2
+
+  # State Management
+  get: ^4.7.3
+  get_storage: ^2.1.1
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
