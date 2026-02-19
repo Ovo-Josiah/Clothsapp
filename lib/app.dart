@@ -1,3 +1,4 @@
+import 'package:clothesapp/authentication/sign_in/sign_in_page.dart';
 import 'package:clothesapp/utils/themes/theme.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.system,
       theme: CAppTheme.lightTheme,
       darkTheme: CAppTheme.darkTheme,
+      home: SignInPage(),
     );
   }
 }

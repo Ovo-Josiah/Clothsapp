@@ -1,4 +1,7 @@
-import 'package:clothesapp/utils/input_widget.dart';
+import 'package:clothesapp/utils/constants/CSizes.dart';
+import 'package:clothesapp/utils/constants/app_colors.dart';
+import 'package:clothesapp/utils/widget/button.dart';
+import 'package:clothesapp/utils/widget/input_widget.dart';
 import 'package:flutter/material.dart';
 
 class SignInPage extends StatefulWidget {
@@ -42,15 +45,7 @@ class _SignInPageState extends State<SignInPage> {
                 icon: Icons.lock,
                 obscureText: true,
               ),
-              SizedBox(height: 15),
-              // Align(
-              //   alignment: Alignment.topRight,
-              //   child: TextButton.icon(
-              //     onPressed: () {},
-              //     label: Text('Forgot Password?'),
-              //     icon: const Icon(Icons.arrow_forward),
-              //   ),
-              // ),
+              SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -62,7 +57,7 @@ class _SignInPageState extends State<SignInPage> {
                           'Forgot Password?',
                           style: TextStyle(
                             fontFamily: "Metropolis",
-                            color: Colors.black,
+                            color: AppColors.tertiaryColor,
                             fontWeight: FontWeight.w500,
                             fontSize: 14,
                           ),
@@ -73,6 +68,12 @@ class _SignInPageState extends State<SignInPage> {
                     ),
                   ),
                 ],
+              ),
+              SizedBox(height: 48),
+              Button(
+                height: CSizes.btnHL,
+                title: 'Sign In',
+                color: AppColors.primaryColor,
               ),
             ],
           ),
