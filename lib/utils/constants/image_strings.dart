@@ -4,4 +4,7 @@ class ImageStrings {
 
   // Fashion
   static const String fashionSale = 'assets/images/main/fashion_page.png';
+
+  static const String googleIcon = 'assets/logo/google.png';
+  static const String fbIcon = 'assets/logo/fb.png';
 }
