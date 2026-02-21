@@ -1,9 +1,11 @@
-import 'package:clothesapp/utils/constants/CSizes.dart';
+import 'package:clothesapp/utils/constants/c_sizes.dart';
 import 'package:clothesapp/utils/constants/app_colors.dart';
 import 'package:clothesapp/utils/constants/image_strings.dart';
+// import 'package:clothesapp/utils/themes/custom_themes/text_theme.dart';
 import 'package:clothesapp/utils/widget/button.dart';
 import 'package:clothesapp/utils/widget/input_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class SignInPage extends StatefulWidget {
   const SignInPage({super.key});
@@ -29,7 +31,7 @@ class _SignInPageState extends State<SignInPage> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               // mainAxisAlignment: MainAxisAlignment.,
               children: [
-                const Text(
+                Text(
                   'Login',
                   style: TextStyle(
                     fontSize: 30,
@@ -38,6 +40,7 @@ class _SignInPageState extends State<SignInPage> {
                     fontFamily: "Metropolis",
                     letterSpacing: 2,
                   ),
+                  // style: Theme.of(context).CTextTheme.headlineLarge,
                 ),
                 SizedBox(height: 30),
                 Form(
@@ -55,7 +58,7 @@ class _SignInPageState extends State<SignInPage> {
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
                           GestureDetector(
-                            onTap: () {},
+                            onTap: () => context.go('/forgot'),
                             child: Row(
                               children: [
                                 Text(
@@ -117,7 +120,7 @@ class _SignInPageState extends State<SignInPage> {
                   ],
                 ),
 
-                SizedBox(height: 20),
+                SizedBox(height: 50),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
@@ -130,8 +133,23 @@ class _SignInPageState extends State<SignInPage> {
                         onPressed: () {},
                         icon: Image(
                           image: AssetImage(ImageStrings.googleIcon),
-                          height: 60,
-                          width: 60,
+                          height: 40,
+                          width: 40,
+                        ),
+                      ),
+                    ),
+                    SizedBox(width: 30),
+                    Container(
+                      decoration: BoxDecoration(
+                        border: Border.all(color: Colors.grey),
+                        borderRadius: BorderRadius.circular(100),
+                      ),
+                      child: IconButton(
+                        onPressed: () {},
+                        icon: Image(
+                          image: AssetImage(ImageStrings.fbIcon),
+                          height: 40,
+                          width: 40,
                         ),
                       ),
                     ),

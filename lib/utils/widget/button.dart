@@ -1,4 +1,4 @@
-import 'package:clothesapp/utils/constants/CSizes.dart';
+import 'package:clothesapp/utils/constants/c_sizes.dart';
 import 'package:flutter/material.dart';
 
 import 'package:clothesapp/utils/constants/app_colors.dart';

@@ -8,6 +8,7 @@ class CTextTheme {
       fontSize: 32,
       fontWeight: FontWeight.bold,
       color: Colors.black,
+      letterSpacing: 2,
     ),
     headlineMedium: TextStyle().copyWith(
       fontSize: 24,
