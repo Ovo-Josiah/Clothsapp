@@ -1,7 +1,8 @@
 class AppText {
   AppText._();
 
-  static const String fashionSale = "Fashion Sale";
+  static const String fashion = "Fashion";
+  static const String sale = "Sale";
   static const String fashionSubHeading = "New ";
   static const String fashionBtnText = "Check";
   static const String fashionContent = "You’ve never seen it before!";
