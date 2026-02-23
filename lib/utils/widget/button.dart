@@ -11,6 +11,7 @@ class Button extends StatelessWidget {
     required this.title,
     this.color = AppColors.primaryColor,
     this.titleColor = AppColors.textColor,
+    this.onTap,
   });
 
   final double height;
@@ -18,6 +19,7 @@ class Button extends StatelessWidget {
   final String title;
   final Color? color;
   final Color? titleColor;
+  final VoidCallback? onTap;
 
   @override
   Widget build(BuildContext context) {
