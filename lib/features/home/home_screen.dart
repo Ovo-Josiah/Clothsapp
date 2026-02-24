@@ -100,39 +100,72 @@ class _HomeScreenState extends State<HomeScreen> {
             SizedBox(
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 30),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Column(
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text(
-                          AppText.fashionSubHeading,
-                          style: TextStyle(
-                            fontSize: 34,
-                            fontWeight: FontWeight.w700,
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              AppText.fashionSubHeading,
+                              style: TextStyle(
+                                fontSize: 34,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            Text(
+                              AppText.fashionContent,
+                              style: TextStyle(
+                                fontSize: 13,
+                                fontWeight: FontWeight.w400,
+                                color: Colors.grey,
+                              ),
+                            ),
+                          ],
                         ),
-                        Text(
-                          AppText.fashionContent,
-                          style: TextStyle(
-                            fontSize: 13,
-                            fontWeight: FontWeight.w400,
-                            color: Colors.grey,
+
+                        GestureDetector(
+                          onTap: () {},
+                          child: Text(
+                            AppText.viewAll,
+                            style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ],
                     ),
+                    SizedBox(height: 20),
+                    SizedBox(
+                      height: 230,
 
-                    GestureDetector(
-                      onTap: () {},
-                      child: Text(
-                        AppText.viewAll,
-                        style: TextStyle(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: Colors.black,
-                        ),
+                      child: ListView.builder(
+                        shrinkWrap: true,
+                        itemCount: 3,
+                        scrollDirection: Axis.horizontal,
+
+                        itemBuilder: (_, index) {
+                          return Padding(
+                            padding: const EdgeInsets.only(right: 20),
+                            child: Column(
+                              children: [
+                                Container(
+                                  width: 200,
+                                  height: 220,
+                                  decoration: BoxDecoration(
+                                    color: Colors.blue,
+                                    borderRadius: BorderRadius.circular(10),
+                                  ),
+                                  child: Image.asset(ImageStrings.sale),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
                       ),
                     ),
                   ],
