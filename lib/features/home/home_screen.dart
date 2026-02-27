@@ -19,6 +19,7 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[50],
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -66,8 +67,8 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   Positioned(
                     left: 30,
-                    // top: MediaQuery.of(context).size.height * 0.4,
-                    top: 370,
+                    top: MediaQuery.of(context).size.height * 0.4,
+                    // top: 370,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
@@ -141,8 +142,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                     SizedBox(height: 20),
                     SizedBox(
-                      height: 230,
-
+                      height: 300,
                       child: ListView.builder(
                         shrinkWrap: true,
                         itemCount: 3,
@@ -151,16 +151,121 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (_, index) {
                           return Padding(
                             padding: const EdgeInsets.only(right: 20),
-                            child: Column(
+                            child: Stack(
                               children: [
-                                Container(
-                                  width: 200,
-                                  height: 220,
-                                  decoration: BoxDecoration(
-                                    color: Colors.blue,
-                                    borderRadius: BorderRadius.circular(10),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    Stack(
+                                      clipBehavior: Clip.hardEdge,
+                                      children: [
+                                        Container(
+                                          decoration: BoxDecoration(
+                                            borderRadius: BorderRadius.circular(
+                                              10,
+                                            ),
+                                          ),
+                                          child: ClipRRect(
+                                            borderRadius: BorderRadius.circular(
+                                              10,
+                                            ),
+                                            child: Image(
+                                              image: AssetImage(
+                                                ImageStrings.sale,
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                        Positioned(
+                                          top: 15,
+                                          left: 15,
+                                          child: Container(
+                                            height: 24,
+                                            width: 40,
+                                            decoration: BoxDecoration(
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  Colors.black,
+                                                  Colors.black,
+                                                ],
+                                              ),
+
+                                              borderRadius:
+                                                  BorderRadius.circular(100),
+                                            ),
+                                            child: Align(
+                                              alignment: Alignment.center,
+                                              child: Text(
+                                                textAlign: TextAlign.center,
+                                                'New',
+                                                style: TextStyle(
+                                                  fontSize: 11,
+                                                  color: Colors.white,
+                                                  fontWeight: FontWeight.w400,
+                                                  fontFamily: 'Metropolis',
+                                                ),
+                                              ),
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    SizedBox(height: 10),
+                                    SizedBox(
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text('Dorothy Perkins'),
+                                          SizedBox(height: 2),
+                                          Text('Evening Dress'),
+                                          SizedBox(height: 2),
+                                          Row(
+                                            children: [
+                                              Text(
+                                                "123",
+                                                style: TextStyle(
+                                                  decoration: TextDecoration
+                                                      .lineThrough,
+                                                ),
+                                              ),
+                                              SizedBox(width: 2),
+                                              Text('125'),
+                                            ],
+                                          ),
+                                        ],
+                                      ),
+                                    ),
+                                  ],
+                                ),
+
+                                Positioned(
+                                  bottom: 90,
+                                  right: 0,
+                                  child: GestureDetector(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 40,
+                                      width: 40,
+                                      decoration: BoxDecoration(
+                                        gradient: LinearGradient(
+                                          colors: [Colors.white, Colors.white],
+                                        ),
+
+                                        borderRadius: BorderRadius.circular(
+                                          100,
+                                        ),
+                                      ),
+                                      child: Align(
+                                        alignment: Alignment.center,
+                                        child: Icon(
+                                          Icons.favorite_outline_outlined,
+                                          color: Colors.grey,
+                                          size: 30,
+                                        ),
+                                      ),
+                                    ),
                                   ),
-                                  child: Image.asset(ImageStrings.sale),
                                 ),
                               ],
                             ),
@@ -172,6 +277,8 @@ class _HomeScreenState extends State<HomeScreen> {
                 ),
               ),
             ),
+
+            // Bottom Nav Bar
           ],
         ),
       ),
