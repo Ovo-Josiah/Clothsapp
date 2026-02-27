@@ -19,6 +19,32 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // bottomNavigationBar: ClipRRect(
+      //   borderRadius: BorderRadius.only(
+      //     topLeft: Radius.circular(20),
+      //     topRight: Radius.circular(20),
+      //   ),
+      //   child: NavigationBar(
+      //     elevation: 2,
+      //     height: 80,
+
+      //     backgroundColor: Colors.white,
+      //     // labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
+      //     destinations: [
+      //       NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
+      //       NavigationDestination(icon: Icon(Icons.shop), label: 'Shop'),
+      //       NavigationDestination(icon: Icon(Icons.card_travel), label: 'Bag'),
+      //       NavigationDestination(
+      //         icon: Icon(Icons.favorite_border_outlined),
+      //         label: 'Favourites',
+      //       ),
+      //       NavigationDestination(
+      //         icon: Icon(Icons.person_2_outlined),
+      //         label: 'Profile',
+      //       ),
+      //     ],
+      //   ),
+      // ),
       backgroundColor: Colors.grey[50],
       body: SingleChildScrollView(
         child: Column(

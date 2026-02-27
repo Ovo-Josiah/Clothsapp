@@ -82,7 +82,7 @@ class _SignInPageState extends State<SignInPage> {
                         height: CSizes.btnHL,
                         title: 'login',
                         color: AppColors.primaryColor,
-                        onTap: () => context.go('/home'),
+                        onTap: () => context.go('/main'),
                       ),
                     ],
                   ),
