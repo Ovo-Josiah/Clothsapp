@@ -1,6 +1,7 @@
 class AppText {
   AppText._();
 
+  static const String seasonSaleName = "Summer Sales";
   static const String fashion = "Fashion";
   static const String sale = "Sale";
   static const String fashionSubHeading = "New ";
@@ -14,6 +15,12 @@ class AppText {
   static const String bottomNavIconBag = "Bag";
   static const String bottomNavIconFav = "Favorites";
   static const String bottomNavIconPro = "Profile";
+
+  // Categories
+  static const String newImgText = "New";
+  static const String clothImgText = "Clothes";
+  static const String shoesImgText = "Shoes";
+  static const String accessImgText = "Accessories";
 
   // Forgot Password Text
   static const String forgotPasswordContent =

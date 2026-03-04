@@ -40,8 +40,8 @@ class _MainState extends State<Main> {
     return Scaffold(
       bottomNavigationBar: ClipRRect(
         borderRadius: BorderRadiusGeometry.only(
-          topLeft: Radius.circular(50),
-          topRight: Radius.circular(50),
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
         child: BottomNavigationBar(
           elevation: 2,
