@@ -1,4 +1,5 @@
 import "package:clothesapp/common/widgets/t_custom_curve_edges.dart";
+import "package:clothesapp/features/Pages/home/home_widget/home_new_card.dart";
 import "package:clothesapp/utils/constants/app_text.dart";
 import "package:clothesapp/utils/constants/c_sizes.dart";
 // import "package:clothesapp/common/widgets/tcircularcontainer.dart";
@@ -19,32 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // bottomNavigationBar: ClipRRect(
-      //   borderRadius: BorderRadius.only(
-      //     topLeft: Radius.circular(20),
-      //     topRight: Radius.circular(20),
-      //   ),
-      //   child: NavigationBar(
-      //     elevation: 2,
-      //     height: 80,
-
-      //     backgroundColor: Colors.white,
-      //     // labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
-      //     destinations: [
-      //       NavigationDestination(icon: Icon(Icons.home), label: 'Home'),
-      //       NavigationDestination(icon: Icon(Icons.shop), label: 'Shop'),
-      //       NavigationDestination(icon: Icon(Icons.card_travel), label: 'Bag'),
-      //       NavigationDestination(
-      //         icon: Icon(Icons.favorite_border_outlined),
-      //         label: 'Favourites',
-      //       ),
-      //       NavigationDestination(
-      //         icon: Icon(Icons.person_2_outlined),
-      //         label: 'Profile',
-      //       ),
-      //     ],
-      //   ),
-      // ),
       backgroundColor: Colors.grey[50],
       body: SingleChildScrollView(
         child: Column(
@@ -177,124 +152,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         itemBuilder: (_, index) {
                           return Padding(
                             padding: const EdgeInsets.only(right: 20),
-                            child: Stack(
-                              children: [
-                                Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Stack(
-                                      clipBehavior: Clip.hardEdge,
-                                      children: [
-                                        Container(
-                                          decoration: BoxDecoration(
-                                            borderRadius: BorderRadius.circular(
-                                              10,
-                                            ),
-                                          ),
-                                          child: ClipRRect(
-                                            borderRadius: BorderRadius.circular(
-                                              10,
-                                            ),
-                                            child: Image(
-                                              image: AssetImage(
-                                                ImageStrings.sale,
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                        Positioned(
-                                          top: 15,
-                                          left: 15,
-                                          child: Container(
-                                            height: 24,
-                                            width: 40,
-                                            decoration: BoxDecoration(
-                                              gradient: LinearGradient(
-                                                colors: [
-                                                  Colors.black,
-                                                  Colors.black,
-                                                ],
-                                              ),
-
-                                              borderRadius:
-                                                  BorderRadius.circular(100),
-                                            ),
-                                            child: Align(
-                                              alignment: Alignment.center,
-                                              child: Text(
-                                                textAlign: TextAlign.center,
-                                                'New',
-                                                style: TextStyle(
-                                                  fontSize: 11,
-                                                  color: Colors.white,
-                                                  fontWeight: FontWeight.w400,
-                                                  fontFamily: 'Metropolis',
-                                                ),
-                                              ),
-                                            ),
-                                          ),
-                                        ),
-                                      ],
-                                    ),
-                                    SizedBox(height: 10),
-                                    SizedBox(
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text('Dorothy Perkins'),
-                                          SizedBox(height: 2),
-                                          Text('Evening Dress'),
-                                          SizedBox(height: 2),
-                                          Row(
-                                            children: [
-                                              Text(
-                                                "123",
-                                                style: TextStyle(
-                                                  decoration: TextDecoration
-                                                      .lineThrough,
-                                                ),
-                                              ),
-                                              SizedBox(width: 2),
-                                              Text('125'),
-                                            ],
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ],
-                                ),
-
-                                Positioned(
-                                  bottom: 90,
-                                  right: 0,
-                                  child: GestureDetector(
-                                    onTap: () {},
-                                    child: Container(
-                                      height: 40,
-                                      width: 40,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          colors: [Colors.white, Colors.white],
-                                        ),
-
-                                        borderRadius: BorderRadius.circular(
-                                          100,
-                                        ),
-                                      ),
-                                      child: Align(
-                                        alignment: Alignment.center,
-                                        child: Icon(
-                                          Icons.favorite_outline_outlined,
-                                          color: Colors.grey,
-                                          size: 30,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            ),
+                            child: HomeNewCard(image: ImageStrings.sale),
                           );
                         },
                       ),

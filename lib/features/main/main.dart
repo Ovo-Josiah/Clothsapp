@@ -38,27 +38,36 @@ class _MainState extends State<Main> {
     // }
 
     return Scaffold(
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.white,
-        elevation: 2,
-        selectedItemColor: AppColors.primaryColor,
-        unselectedItemColor: AppColors.tertiaryColor,
-
-        currentIndex: selectedIndex,
-        onTap: selectPage,
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-          BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Shop'),
-          BottomNavigationBarItem(icon: Icon(Icons.card_travel), label: 'Bag'),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_border_outlined),
-            label: 'Favourites',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person_2_outlined),
-            label: 'Profile',
-          ),
-        ],
+      bottomNavigationBar: ClipRRect(
+        borderRadius: BorderRadiusGeometry.only(
+          topLeft: Radius.circular(50),
+          topRight: Radius.circular(50),
+        ),
+        child: BottomNavigationBar(
+          elevation: 2,
+          selectedItemColor: AppColors.primaryColor,
+          unselectedItemColor: AppColors.tertiaryColor,
+          backgroundColor: AppColors.primaryColor,
+          type: BottomNavigationBarType.shifting,
+          currentIndex: selectedIndex,
+          onTap: selectPage,
+          items: const [
+            BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+            BottomNavigationBarItem(icon: Icon(Icons.shop), label: 'Shop'),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.card_travel),
+              label: 'Bag',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.favorite_border_outlined),
+              label: 'Favourites',
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_2_outlined),
+              label: 'Profile',
+            ),
+          ],
+        ),
       ),
       body: activePage,
     );

@@ -1,4 +1,6 @@
-import 'package:clothesapp/features/Pages/bag/sub_cate/women_page.dart';
+import 'package:clothesapp/features/Pages/bag/sub_cate/kid_category_screen.dart';
+import 'package:clothesapp/features/Pages/bag/sub_cate/men_category_screen.dart';
+import 'package:clothesapp/features/Pages/bag/sub_cate/women_category_screen.dart';
 import 'package:clothesapp/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
@@ -45,8 +47,9 @@ class _CategoriesPageState extends State<CategoriesPage> {
           ),
           body: TabBarView(
             children: [
-              const WomenPage(),
-              const Center(child: Text('Men')),
+              const WomenCategoryScreen(),
+              const MenCategoryScreen(),
+              const KidCategoryScreen(),
             ],
           ),
         ),
