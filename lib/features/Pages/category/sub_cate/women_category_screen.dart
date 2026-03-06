@@ -1,6 +1,6 @@
 import 'package:clothesapp/data/dummy_data.dart';
-import 'package:clothesapp/features/Pages/bag/category_widget/clothes_card.dart';
-import 'package:clothesapp/features/Pages/bag/category_widget/women_header.dart';
+import 'package:clothesapp/features/Pages/category/category_widget/clothes_card.dart';
+import 'package:clothesapp/features/Pages/category/category_widget/women_header.dart';
 import 'package:clothesapp/model/category_type.dart';
 import 'package:clothesapp/utils/constants/app_colors.dart';
 import 'package:clothesapp/utils/constants/app_text.dart';

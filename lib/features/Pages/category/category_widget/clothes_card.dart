@@ -9,43 +9,49 @@ class ClothesCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRRect(
-      borderRadius: BorderRadius.circular(10),
-      child: Container(
-        width: MediaQuery.of(context).size.width,
-        height: 150,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          gradient: LinearGradient(colors: [Colors.red, Colors.red]),
-        ),
-        child: Row(
-          children: [
-            // Categoty name
-            Expanded(
-              child: Container(
-                height: 150,
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [Colors.white, Colors.white],
+    return GestureDetector(
+      // onTap: () => ,
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(10),
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: 150,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(10),
+            gradient: LinearGradient(colors: [Colors.red, Colors.red]),
+          ),
+          child: Row(
+            children: [
+              // Categoty name
+              Expanded(
+                child: Container(
+                  height: 150,
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      colors: [Colors.white, Colors.white],
+                    ),
                   ),
-                ),
-                child: Center(
-                  child: Text(
-                    type,
-                    style: TextStyle(fontWeight: FontWeight.w400, fontSize: 18),
+                  child: Center(
+                    child: Text(
+                      type,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontSize: 18,
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
-            // Image Container
-            Expanded(
-              child: Image(
-                image: AssetImage(image),
-                fit: BoxFit.cover,
-                height: 150,
+              // Image Container
+              Expanded(
+                child: Image(
+                  image: AssetImage(image),
+                  fit: BoxFit.cover,
+                  height: 150,
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );

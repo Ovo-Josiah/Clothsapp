@@ -1,6 +1,6 @@
-import 'package:clothesapp/features/Pages/bag/sub_cate/kid_category_screen.dart';
-import 'package:clothesapp/features/Pages/bag/sub_cate/men_category_screen.dart';
-import 'package:clothesapp/features/Pages/bag/sub_cate/women_category_screen.dart';
+import 'package:clothesapp/features/Pages/category/sub_cate/kid_category_screen.dart';
+import 'package:clothesapp/features/Pages/category/sub_cate/men_category_screen.dart';
+import 'package:clothesapp/features/Pages/category/sub_cate/women_category_screen.dart';
 import 'package:clothesapp/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
