@@ -1,5 +1,5 @@
-import 'package:clothesapp/features/Pages/category/categories_page.dart';
-import 'package:clothesapp/features/Pages/home/home_screen.dart';
+// import 'package:clothesapp/features/Pages/category/categories_page.dart';
+// import 'package:clothesapp/features/Pages/home/home_screen.dart';
 import 'package:clothesapp/utils/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';

@@ -1,5 +1,6 @@
-import 'package:clothesapp/utils/constants/image_strings.dart';
+// import 'package:clothesapp/utils/constants/image_strings.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 class ClothesCard extends StatelessWidget {
   const ClothesCard({super.key, required this.image, required this.type});
@@ -10,7 +11,7 @@ class ClothesCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // onTap: () => ,
+      onTap: () => context.push('/categories/$type'),
       child: ClipRRect(
         borderRadius: BorderRadius.circular(10),
         child: Container(

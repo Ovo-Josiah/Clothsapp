@@ -1,9 +1,10 @@
-import 'package:clothesapp/authentication/forget/forget_password.dart';
-import 'package:clothesapp/authentication/sign_in/sign_in_page.dart';
+// import 'package:clothesapp/authentication/forget/forget_password.dart';
+// import 'package:clothesapp/authentication/sign_in/sign_in_page.dart';
 import 'package:clothesapp/features/Pages/category/categories_page.dart';
+import 'package:clothesapp/features/Pages/category/sub_cate/sub_cat_detail/category_detail_screen.dart';
 import 'package:clothesapp/features/Pages/home/home_screen.dart';
 import 'package:clothesapp/features/main/main.dart';
-import 'package:clothesapp/splashscreen/splash_screen.dart';
+// import 'package:clothesapp/splashscreen/splash_screen.dart';
 // import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:go_router/go_router.dart';
 
@@ -34,10 +35,11 @@ final router = GoRouter(
           builder: (context, state) => CategoriesPage(),
           routes: [
             GoRoute(
-              path: ':id',
+              path: ':name',
               builder: (context, state) {
-                final id = state.pathParameters['id']!;
-                return CategoryDetailsScreen(categoryId: id);
+                final name = state.pathParameters['name']!;
+                // final name = state.queryParameters['name']!;
+                return CategoryDetailsScreen(categoryName: name);
               },
             ),
           ],

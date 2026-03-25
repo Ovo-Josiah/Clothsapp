@@ -4,7 +4,7 @@ import 'package:clothesapp/features/Pages/category/category_widget/women_header.
 import 'package:clothesapp/model/category_type.dart';
 import 'package:clothesapp/utils/constants/app_colors.dart';
 import 'package:clothesapp/utils/constants/app_text.dart';
-import 'package:clothesapp/utils/constants/image_strings.dart';
+// import 'package:clothesapp/utils/constants/image_strings.dart';
 
 import 'package:flutter/material.dart';
 
